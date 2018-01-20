@@ -1,0 +1,65 @@
+/* ==================== Improved One Page Checkout with progressbar  ===================== */
+.checkout-onepage-index .main { padding:0; border:0; background: #FFF; border: 1px solid #dcded2; padding: 9px; width: 920px; }
+.checkout-onepage-index .col-main { width: 680px; }
+.checkout-onepage-index .header-container { border-bottom: 1px solid #e4e4d3; width: 940px; margin: 0 auto; padding-bottom: 18px; }
+.checkout-onepage-index .main-container { border-top: 1px solid #ffffff; width: 940px; margin: 0 auto; padding-top: 20px; }
+.checkout-onepage-index .page-title { border-bottom: 1px solid #e4e4d3; }
+
+.opc { position:relative; overflow:hidden; height:950px; padding: 0; text-align:center; border:0; background:transparent none; }
+.opc .ul { list-style:disc; margin: .5em 0; }
+.opc li.section { display:inline; }
+.opc .step-title,.opc .allow .step-title { border-color:#FBFAF6; }
+.opc .step { padding:30px 20px; position:absolute; top:80px; left:0; z-index:1; width:638px; height:808px; text-align:left; border: 1px solid #dee0d7; border-radius: 2px; overflow: auto; }
+.opc .step-title .number,.opc .allow .step-title .number,.opc .active .step-title .number { float:none; display:block; margin:0 auto; margin-bottom:10px; }
+.opc .step-title a { display:none; }
+.opc .step-title .number { background:#e7e7e7; color:#595959; font-size: 13px; font-weight: bold; width:30px; height:30px; line-height:30px; border-radius:20px; margin-bottom:10px; padding:0; border:2px solid #e7e7e7; box-shadow: 0 0 0 3px #FFF inset; position:relative; z-index:1; }
+.opc .step-title h2 { font-size:12px; color:#bbb; clear:both; margin-bottom:10px; }
+.opc .allow .step-title .number { background:#8f9668; border-color:#8f9668; color:#fff; }
+.opc .allow .step-title h2 { color:#8f9668; }
+.opc .active .step-title .number { background:#b1693c; border-color:#b1693c; color:#fff; }
+.opc .active .step-title h2 { color:#b1693c; }
+.opc .step-title,.opc .allow .step-title,.opc .active .step-title { position:relative; text-align:center; border:none; background:none; padding:0; overflow:hidden!important; height:80px; display:inline-block; vertical-align:top; }
+.opc .step-title,.opc .allow .step-title,.opc .active .step-title { *display:block; *float:left; } 
+.opc .step-title h2,.opc .allow .step-title h2,.opc .active .step-title h2 { width:100%; text-align:center; }
+.opc .step-title { width:16%; }
+
+.opc:first-of-type .step{-webkit-transition: all 0.5s ease-in-out;-moz-transition: all 0.5s ease-in-out;-o-transition: all 0.5s ease-in-out;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;}
+.opc:first-of-type .step[style*='display:none;'],
+.opc:first-of-type .step[style*='display: none;']{display:block !important;}
+.opc:first-of-type .section .step{left: 100%;}
+.opc:first-of-type .allow .step{left: -100%;}
+.opc:first-of-type .active .step{left:0;}
+.opc:first-of-type li:last-child .step-title a{width:50%}
+.opc:first-of-type li:first-child .step-title a{width:50%;left:50%}
+.opc:first-of-type .step-title a { display:block;height:1px;border-bottom:1px dashed #ccc; width:100%; text-indent:-3000px; position: absolute;top:15px;z-index: 0}
+.opc:first-of-type .allow .step-title a {}
+
+/* ================================= Solution by www.h-o.nl =============================== */
+
+
+.checkout-onepage-index .sidebar .block { background: transparent none; border: 0; padding: 0; box-shadow: none; }
+.checkout-onepage-index .sidebar .block .block-title { background: #e4e9ce; border: 1px solid #e4e4d3; box-shadow: 0 0 0 1px #f5f7eb inset; color: #6a7335; padding: 7px 10px; margin-bottom: 10px; }
+.checkout-onepage-index .sidebar .block .block-content { padding-left: 14px; border-left: 1px solid #edece6; }
+.block-progress dl { margin: 0; padding: 0; border: 0; }
+.block-progress dt { border-bottom: 1px dashed #edece6; font-weight: bold; padding: 6px 0; }
+.block-progress dt .separator { display: none; }
+.block-progress dt a { float: right; font-weight: normal; }
+.block-progress dd { margin: 10px 0 20px; }
+
+#login-form-list { border-top: 1px solid #e5e5e5; }
+#login-form-list li.control { border-bottom: 1px solid #e5e5e5; margin: 0; padding: 10px 20px; }
+#login-form-list li.control.active { background: #f8f8f8; }
+#login-form-list .information { margin: 10px 0 0 22px; }
+
+#login-form-list #login-form { background: #FFF; display: block; border: 1px solid #dcded5; padding: 14px; width: 310px; margin: 0 auto; }
+#login-form-list #login-form label { display: inline-block; max-width: 30%; line-height: 25px; }
+#login-form-list #login-form .input-box { float: right; width: 65%; }
+
+#co-billing-form,
+#co-shipping-form { width: 65%; margin: 0 auto; display: block; }
+
+#payment_form_cgp_ideal .input-box { width: auto; float: none; }
+#payment_form_cgp_ideal .input-box label { display: block; margin-bottom: .5em; }
+#payment_form_cgp_ideal .input-box select { width: auto; }
+
+#review-buttons-container .f-left { display: none; }

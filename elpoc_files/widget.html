@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)https://www.kiyoh.nl/widget.php?company=3786&size=180x117 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!--<base href="//www.kiyoh.nl/">--><base href=".">
+	<title>KiyOh Widget</title>      
+	
+
+	<script type="text/javascript">
+		
+		var str = navigator.appVersion;
+		if(str.indexOf("MSIE 7.0") != -1 || str.indexOf("MSIE 8.0") != -1  ){
+			var head= document.getElementsByTagName('head')[0];
+			var script= document.createElement('script');
+			script.type= 'text/javascript';
+			script.src= 'https://www.kiyoh.nl/javascript/css3-mediaqueries.js';  
+			head.appendChild(script);
+		} 
+		
+	</script>      
+
+	<style type="text/css">
+		
+
+		/* reset*/
+		body,div,h1 { margin:0; padding:0; }
+
+		/* Widget CSS */
+		html, body, .widget, .textWrapper{height:100%; width:100%}
+		body, div#overlay, div#overlay > a, div#widget   { min-width:130px; width:100%; min-height:97px; height: 100%;}
+		body { position:relative;float:left;max-width:600px;max-height:600px;background-color:transparent;margin:0;padding:0; font-family: Arial;}
+		div#overlay { position:absolute;left:0;top:0;max-width:600px;max-height:600px;z-index:500;background:none;border:0; }
+		div#overlay > a { display:block;max-width:600px;max-height:600px;border:0px;z-index:505;background:#FFF;opacity:0;zoom:1;filter:alpha(opacity=0); }
+		div#widget { position:relative;float:left;max-width:600px;max-height:600px;border-left:2px solid #ededed; border-right:2px solid #ededed; border-top: 4px solid #ededed; border-bottom:4px solid #ededed;background:#fff;  }
+				div#widget .top { float:left;width:100%; margin-top:10px; margin-bottom:15px; position:relative; z-index:2;}
+		div#widget .top .circle-wrapper { float:left;width:124px; }
+		div#widget .top .outer-circle{height:84px;width:83px;text-align:center;float:left;margin-left:12px;background:url(../images/logo/round-only.png) center center no-repeat;background-size:contain; }
+		div#widget .top .inner-circle{height:51px; width:39px;margin:18px auto 0;	}
+		div#widget .top .inner-circle > span{font-size: 36px; color: #444445; margin: 0 auto;display:block;padding-top:5%;font-weight:700;}
+		div#widget .top .inner-circle > span > span {
+			font-size:18px;
+			font-weight:normal;
+			float:right;
+			display:block;
+			margin:6px 0 0 0;
+		}
+		div#widget .top .inner-circle > span + span{font-size: 12px; color: #444445; margin: 0 auto;padding-top:0;}
+		div#widget .top .ratingWrapper { 
+			position:absolute;
+			top:0;
+			left:124px;
+			right:0;
+			bottom:0;
+			color:#000;
+		}
+		div#widget .top .ratingWrapper > .textual{
+			font-family: Arial; font-size:16px; text-align:center;
+			margin:14px 0 12px;
+		}
+		div#widget .top .ratingWrapper > .rating{ background: url(images/stars/normal.png) #727272; height:30px; width:160px; margin: 0px auto;}
+		div#widget .top .ratingWrapper > .rating > .ratingOverlay{ background: url(images/stars/normal.png) #f8c541; height:30px; width:87%;}
+		div#widget .text {	z-index:1;width:95%; height:48%;clear:both; background:#fff;	padding:10px 28px; position:relative;	margin:0 auto; 	-webkit-box-shadow: 0 0 1px 1px #e2e2e2; 	-moz-box-shadow: 0 0 1px 1px #e2e2e2; 	box-shadow: 0 0 1px 1px #e2e2e2; 	-moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px}
+		div#widget .text.first .arrow{background: url(images/arrows-be.png) -41px -43px no-repeat; position:absolute; z-index:99; height:14px; width:20px; right:45px; top: -14px;}
+		div#widget .text .main { overflow:hidden;height:75%; float:left;display:inline-block; position: relative; font-size: 14px;color:#898888}                                    
+		div#widget .text .main .text-short, div#widget .text .main .text-shortest, div#widget .text .main .text-medium{display:none;}
+		div#widget .text .main .text-short, div#widget .text .main .text-shortest, div#widget .text .main .text-medium, div#widget .text .main .text-normal{margin:0;} 
+		div#widget .text span.quoteTop {font: bold 30px Arial; color:#666; position:absolute; top:-5px; left:-20px;}
+		div#widget .text span.quoteBottom{font: bold 30px Arial; color:#666;position:absolute; bottom:-15px; right:-15px;}
+		div#widget .text .notes { left:12px;right:12px; position:absolute; bottom:12px;font-size:13px;text-decoration:none;color:#9a9999; }
+		div#widget .text .notes span.right { display:block;float:left;}                      
+		div#widget .text .notes span.left { display:block;float:right;text-align:right;margin-top:3px;text-decoration:none;color:#9a9999;}
+		div#widget .bottom { float:left;width:100%;height:38px; position:absolute; bottom: 0; left:0; z-index:0;background:#373637;text-align:center; display:inline-block;} 
+		div#widget .bottom > p{line-height: 38px; color:#FFFFFF; margin:0; font-weight:bold; font-size:24px;}     
+		.box-sizing { -moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;* behavior: url('https://www.kiyoh.nl/stylesheet/boxsizing.php'); }
+
+		div#widget .text + .text {
+			margin-top:2%;
+		}
+
+.textWrapper {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	padding:110px 0 50px 0;
+	height:auto;
+}
+
+		div#widget .top .ratingWrapper {
+			width:auto;
+		}
+
+		div#widget .top .ratingWrapper {
+			clear:right;
+			margin-right:30px;
+			margin-top:0;
+			margin-bottom:5px;
+		}
+		
+		@media screen and (max-width: 500px){
+			div#widget .text .main .text-normal{display:none;}
+			div#widget .text .main .text-medium{display:block;}
+		}
+
+		@media screen and (max-height:405px){
+			div#widget .textWrapper > .text { height:100%; }
+			div#widget .textWrapper > .text + .text {display:none;}
+		}
+
+		@media screen and (min-width:400px) and (max-height:260px){ 
+		div#widget .text .main .text-normal{display:none;}
+		div#widget .text .main .text-medium{display:block;}
+
+		}
+
+		@media screen and (min-width:400px) and (max-height:200px){ 
+		div#widget .text .main .text-medium{display:none;}
+		div#widget .text .main .text-short{display:block;}
+
+		}
+
+		@media screen and (max-width:340px) {
+
+
+		div#widget .text {
+			padding-left:12px;
+			padding-right:12px;
+		}
+		}
+
+		@media screen and (max-width: 340px) and (max-height: 465px) {
+		div#widget .text .main .text-medium{display:none;}
+		div#widget .text .main .text-short{display:block;}
+		}
+		@media screen and (max-width: 230px){
+		div#widget .text .main .text-short {  display: block; }
+		div#widget .text .main .text-medium {  display: none; }
+		}
+
+		@media screen and (max-height: 275px) and (min-width: 230px) and (max-width: 400px){
+		div#widget .text .main .text-short{display:none;}
+		div#widget .text .main .text-medium{display:none;}
+		div#widget .text .main .text-shortest{display:block;}
+		}
+
+		@media screen and (max-height:250px) {
+			div#widget .text .notes {
+				display:none;
+			}
+		}
+
+
+		@media screen and (max-width:311px), (max-height:240px){
+			div#widget .text .main .text-short{display:none;}
+			div#widget .text .main .text-medium{display:none;}
+			div#widget .text .main .text-shortest{display:block;}
+		}
+
+		@media screen and (max-width:312px) {
+			div#widget .top .ratingWrapper > .textual {
+				text-align:right;
+			}
+
+			div#widget .top .ratingWrapper {
+				margin-right:0;
+
+			}
+
+			div#widget .top .ratingWrapper > .rating {
+				float:right;
+			}
+
+			div#widget .top .ratingWrapper {
+				right:10px;
+				left:100px;
+			}
+		}
+
+		@media screen and (max-width:274px), (max-height:214px) {
+			div#widget .top .ratingWrapper > .rating{ background: url(images/stars/small.png) #727272; height:21px; width:120px; margin: 0px auto;}
+			div#widget .top .ratingWrapper > .rating > .ratingOverlay{ background: url(images/stars/small.png) #f8c541; height:21px; width:87%;}
+
+			div#widget .top .ratingWrapper > .textual {
+				font-size:13px;
+			}
+		}
+
+		@media screen and (max-width:243px), (max-height:214px) {
+			div#widget .top .circle-wrapper { float:left;width:94px; }
+			div#widget .top .outer-circle{height:61px;width:61px;margin-top:6px;margin-left:16px; }
+			div#widget .top .inner-circle{height:32px; width:30px;margin-top:11px;	}
+			div#widget .top .inner-circle > span{font-size:28px}
+			div#widget .top .inner-circle > span > span { margin-top:5px;font-size:15px; }
+		}
+
+		@media screen and (min-height:200px) and (max-height:200px) {
+			div#widget .text {
+				padding:6px 8px 9px;
+			}
+		}
+
+		@media screen and (max-width:230px) {
+			div#widget .text .notes span.left {
+				display:none;
+			}
+		}
+
+		@media screen and (max-height:214px) {
+			.textWrapper {
+				padding-top:95px;
+			}
+		}
+
+		@media screen and (max-height:200px) {
+			div#widget .text {
+				padding:6px 8px;
+			}
+		}
+
+		@media screen and (max-height:190px) {
+			div#widget .text.first .arrow {
+				display:none;
+			}
+
+			.textWrapper {
+				padding-top:84px;
+				padding-bottom:45px;
+			}
+
+			div#widget .top {
+				margin-top:6px;
+			}
+		}
+
+		@media screen and (max-height:174px) {
+			div#widget .bottom > p {
+				font-size:16px;
+				line-height:26px;
+			}
+
+			div#widget .bottom {
+				height:26px;
+			}
+
+			.textWrapper {
+				padding-bottom:35px;
+			}
+		}
+
+		@media screen and (max-height:164px), (max-width:215px) {
+			div#widget .top {
+				margin-top:2px;
+			}
+
+			div#widget .top .circle-wrapper {
+				width:70px;
+			}
+
+			div#widget .top .outer-circle {
+				width:50px;
+				height:50px;
+				margin-left:8px;
+			}
+
+			div#widget .top .inner-circle {
+				width:25px;
+			}
+
+			div#widget .top .inner-circle > span {
+				font-size:22px;
+			}
+
+			div#widget .top .inner-circle > span > span {
+				font-size:13px;
+				margin-top:3px;
+			}
+
+			.textWrapper {
+				padding-top:67px;
+			}
+
+			div#widget .top .ratingWrapper > .textual {
+				font-size:11px;
+				margin:10px 0 6px;
+			}
+		}
+/*
+		@media screen and (max-width:215px) {
+			div#widget .top .ratingWrapper > .textual {
+				font-size:11px;
+			}
+		}*/
+
+		@media screen and (max-width:199px) and (min-height:147px) {
+			div#widget .top .ratingWrapper > .rating {
+				display:none;
+			}
+
+			div#widget .top .ratingWrapper {
+				text-align:center;
+				margin-top:10px;
+				left:84px;
+			}
+
+			div#widget .top .ratingWrapper .textual {
+				text-align:center;
+			}
+		}
+
+		@media screen and (max-width:178px) and (min-height:147px) {
+			div#widget .top .ratingWrapper {
+				display:none;
+			}
+
+			div#widget .top .outer-circle {
+				width:100%;
+				margin-left:0;
+				margin-right:0;
+			}
+
+			div#widget .top .circle-wrapper {
+				width:100%;
+			}
+		}
+
+		@media screen and (max-height:135px) {
+			div#widget .top {
+				margin-top:2px;
+			}
+		}
+
+		@media screen and (max-height:122px) {
+			div#widget .bottom {
+				height:28px;
+			}
+
+			div#widget .bottom > p {
+				line-height:28px;
+				font-size:18px;
+			}
+		}
+
+		@media screen and (max-height:110px) {
+			div#widget .bottom {
+				height:22px;
+			}
+
+			div#widget .bottom > p {
+				line-height:22px;
+				font-size:14px;
+			}
+		}
+
+		@media screen and (max-height:102px) {
+			div#widget {
+				border-width:2px;
+			}
+		}
+
+		@media screen and (max-height:147px) {
+			.textWrapper {
+				display:none;
+			}
+
+			div#widget .top .circle-wrapper {
+				width:100%;
+			}
+
+			div#widget .top .outer-circle {
+				width:100%;
+				margin:0;
+			}
+
+			div#widget .top .ratingWrapper {
+				position:relative;
+				float:left;
+				top:auto;
+				bottom:auto;
+				left:auto;
+				right:auto;
+				width:100%;
+				text-align:center;
+				padding-left:6px;
+				padding-right:6px;
+			}
+
+			div#widget .top .ratingWrapper > .textual {
+				float:left;
+				width:100%;
+				text-align:center;
+			}
+
+			div#widget .top .ratingWrapper > .rating {
+				float:none;
+				margin-top:26px;
+			}
+			div#widget .bottom {
+				height:22px;
+			}
+
+			div#widget .bottom > p {
+				line-height:22px;
+				font-size:14px;
+			}
+		}
+
+		@media screen and (max-height:133px), (max-width:132px) {
+
+			div#widget .top .ratingWrapper > .textual {
+				display:none;
+			}
+
+			div#widget .top .ratingWrapper > .rating {
+				margin-top:10px;
+			}
+		}
+
+		@media screen and (max-height:116px), (max-width:132px) {
+
+			div#widget .top .ratingWrapper > .rating {
+				display:none;
+			}
+
+			div#widget .top .circle-wrapper {
+				margin-top:6px;
+			}
+		}
+
+		div#widget .top .inner-circle > span{*color:#003f75;}
+
+		@media screen and (max-height:500px) {
+			div#widget .text .main { height:71%;}
+		}
+
+		
+	</style>
+
+<link rel="stylesheet" href="chrome-extension://bpmlphkhnjcjkfhpojoocgbgpkfeipgb/css/webext_print.css" media="print"></head>
+
+<body>
+
+<div id="overlay"><a href="https://www.kiyoh.nl/superfoods_nl_bv/" target="_blank" rel="nofollow"></a></div>
+<div id="widget" class="box-sizing">
+
+	<div class="top box-sizing">
+		<div class="circle-wrapper">
+			<div class="outer-circle box-sizing">
+				<div class="inner-circle box-sizing">
+					<span>8<span>,7</span></span>        
+				</div>
+			</div>
+		</div>
+
+		<div class="ratingWrapper box-sizing">
+			<div class="textual box-sizing">5603 Beoordelingen</div>
+			<div class="rating box-sizing">
+				<div class="ratingOverlay box-sizing"></div>
+			</div>
+		</div>
+	</div>
+	<div class="textWrapper">
+					
+			<div class="text first box-sizing">
+				<div class="arrow"></div>
+
+				<div class="main box-sizing">
+					<table>               
+						<tbody><tr>
+							<td>
+								<p class="text-normal">Prima prijzen, zeer snelle levertijd!</p><p class="text-medium">Prima prijzen, zeer snelle levertijd!</p> <p class="text-short">Prima prijzen, zeer snelle levertijd!</p><p class="text-shortest">Prima prijzen, zeer snelle levertijd!</p>
+							</td>
+						</tr>
+					</tbody></table>	  
+				</div>
+				<div class="notes box-sizing"> 
+					<span class="right">LM 17/01/2018</span>
+					<span class="left">meer...</span>
+				</div>
+			</div>
+		 
+
+					
+			<div class="text box-sizing">
+				<div class="arrow"></div>
+
+				<div class="main box-sizing">
+					<table>               
+						<tbody><tr>
+							<td>
+								<p class="text-normal">nog weinig ervaring met Superfoods, maar tot dusver  ALLES SUPER!</p><p class="text-medium">nog weinig ervaring met Superfoods, maar tot dusver  ALLES SUPER!</p> <p class="text-short">nog weinig ervaring met Superfoods, maar tot dusver  ALLES SUPER!</p><p class="text-shortest">nog weinig ervaring met Superfoods, maar tot dusv...</p>
+							</td>
+						</tr>
+					</tbody></table>	  
+				</div>
+				<div class="notes box-sizing"> 
+					<span class="right">17/01/2018</span>
+					<span class="left">meer...</span>
+				</div>
+			</div>
+			</div>
+	<div class="bottom">
+		<p>kiyoh</p>
+	</div>
+</div>
+
+
+</body></html>

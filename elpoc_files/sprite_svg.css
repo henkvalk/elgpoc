@@ -1,0 +1,21 @@
+.product-view .box-reviews .data-table thead span,
+.availability span,
+#banners a.nav-next,
+#banners a.nav-prev,
+.btn-remove,
+.btn-remove2,
+.sort-by span.asc,
+.sort-by span.desc,
+.pages a.previous, .pages a.next,
+.header .cart-header a.icon,
+#toppers .tab-holder .tab .scroll-container a.next,
+#toppers .tab-holder .tab .scroll-container a.prev,
+.block-layered-nav .currently li a span.icon,
+.rating-box,
+.rating-box .rating,
+li.item .ribbon,
+.btn-refresh { background-image: url(../images/sprite.svg); background-size: 238px 74px; background-repeat: no-repeat; }
+
+.block-usps li,
+.block-newsletter ul li,
+.block-cart_usp li { background-image: url(../images/check.svg); background-size: 18px 16px; }
